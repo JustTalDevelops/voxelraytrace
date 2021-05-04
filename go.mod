@@ -1,4 +1,4 @@
-module github.com/JustTalDevelops/voxelraytrace
+module github.com/justtaldevelops/voxelraytrace
 
 go 1.16
 
