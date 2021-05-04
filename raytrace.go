@@ -44,19 +44,19 @@ func BetweenPoints(start, end mgl64.Vec3) (vectors []mgl64.Vec3, err error) {
 			if tMaxX > radius {
 				break
 			}
-			currentPoint.Add(mgl64.Vec3{stepX})
+			currentPoint = currentPoint.Add(mgl64.Vec3{stepX})
 			tMaxX += tDeltaX
 		} else if tMaxY < tMaxZ {
 			if tMaxY > radius {
 				break
 			}
-			currentPoint.Add(mgl64.Vec3{0, stepY})
+			currentPoint = currentPoint.Add(mgl64.Vec3{0, stepY})
 			tMaxY += tDeltaY
 		} else {
 			if tMaxZ > radius {
 				break
 			}
-			currentPoint.Add(mgl64.Vec3{0, 0, stepZ})
+			currentPoint = currentPoint.Add(mgl64.Vec3{0, 0, stepZ})
 			tMaxZ += tDeltaZ
 		}
 	}
